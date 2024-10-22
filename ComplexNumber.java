@@ -40,31 +40,38 @@ class ComplexNumber {
     }
 
     public static void main(String[] args) {
+
+        // Test toString()
         System.out.println(new ComplexNumber(4, 8).toString());
+        
         ComplexNumber num1 = new ComplexNumber(2, 4);
         ComplexNumber num2  = new ComplexNumber(3, 8);
 
-        if (num1.plus(num2) == new ComplexNumber(5, 12)) {
-            System.out.println("Sum Test Passed");
+        // Test sum()
+        ComplexNumber expectedSum = new ComplexNumber(5, 12);
+        ComplexNumber resultSum = num1.plus(num2);
+        if (expectedSum.getReal() == resultSum.getReal() && expectedSum.getImaginary() == resultSum.getImaginary()) {
+            System.out.println("Sum Test PASSED");
         }else{
-            System.out.println("Sum Test Failed");
+            System.out.println("Sum Test FAILED");
         }
 
-        if(num1.sub(num2) == new ComplexNumber(-1, -4)){
-            System.out.println("Sub Test Passed");
+        // Test sub()
+        ComplexNumber expectedSub = new ComplexNumber(-1, -4);
+        ComplexNumber resultSub = num1.sub(num2);
+        if(expectedSub.getReal() == resultSub.getReal() && expectedSub.getImaginary() == resultSub.getImaginary()){
+            System.out.println("Sub Test PASSED");
         }else{
-            System.out.println("Sub Test Failed");
+            System.out.println("Sub Test FAILED");
         }
 
-        ComplexNumber z1 = new ComplexNumber(3, 2);
-        ComplexNumber z2 = new ComplexNumber(1, 4);
-
-        ComplexNumber result = z1.times(z2);
-
-        if(result == new ComplexNumber(-5, 14)){
-            System.out.println("test times: true");
+        // Test times()
+        ComplexNumber expectedTimes = new ComplexNumber(-26, 28);
+        ComplexNumber resultTimes = num1.times(num2);
+        if(expectedTimes.getReal() == resultTimes.getReal() && expectedTimes.getImaginary() == resultTimes.getImaginary()){
+            System.out.println("Times Test: PASSED");
         }else{
-            System.out.println("test times: false");
+            System.out.println("Times test: FAILED");
         }
     }
 }
