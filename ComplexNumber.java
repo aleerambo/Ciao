@@ -1,5 +1,3 @@
-import com.apple.laf.resources.aqua;
-
 class ComplexNumber {
     private final double real;
     private final double imaginary;
