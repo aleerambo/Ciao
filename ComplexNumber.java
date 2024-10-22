@@ -33,4 +33,9 @@ class ComplexNumber {
         final double imaginaryNumerator = other.getReal() * this.getImaginary() - this.getReal() * other.getImaginary();
         return new ComplexNumber(realNumerator / commonDenominator, imaginaryNumerator / commonDenominator);
     }
+
+    public String toString(){
+        return "Numero complesso: " + this.getReal() + " " + this.getImaginary() + "j";
+    }
+
 }
