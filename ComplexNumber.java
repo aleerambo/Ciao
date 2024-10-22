@@ -35,3 +35,8 @@ class ComplexNumber {
         return new ComplexNumber(realNumerator / commonDenominator, imaginaryNumerator / commonDenominator);
     }
 }
+
+public static void main(String[] args) {
+    System.out.println(new ComplexNumber(4, 8).toString());
+
+}
