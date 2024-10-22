@@ -1,3 +1,5 @@
+import com.apple.laf.resources.aqua;
+
 class ComplexNumber {
     private final double real;
     private final double imaginary;
@@ -24,7 +26,8 @@ class ComplexNumber {
     }
 
     public ComplexNumber times(final ComplexNumber other) {
-        return null;
+        return new ComplexNumber(this.getReal() * other.getReal() - this.getImaginary() * other.getImaginary(),
+                this.getReal() * other.getImaginary() + this.getImaginary() * other.getReal());
     }
 
     public ComplexNumber div(final ComplexNumber other) {
