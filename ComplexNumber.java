@@ -8,23 +8,24 @@ class ComplexNumber {
     }
 
     public double getImaginary() {
-        return 0;
+        return this.imaginary;
     }
 
     public double getReal() {
-        return 0;
+        return this.real;
     }
     
     public ComplexNumber plus(final ComplexNumber other) {
-        return null;
+        return new ComplexNumber(this.getReal() + other.getReal(), this.getImaginary() + other.getImaginary());
     }
     
     public ComplexNumber sub(final ComplexNumber other) {
-        return null;
+        return new ComplexNumber(this.getReal() - other.getReal(), this.getImaginary() - other.getImaginary());
     }
 
     public ComplexNumber times(final ComplexNumber other) {
-        return null;
+        return new ComplexNumber(this.getReal() * other.getReal() - this.getImaginary() * other.getImaginary(),
+                this.getReal() * other.getImaginary() + this.getImaginary() * other.getReal());
     }
 
     public ComplexNumber div(final ComplexNumber other) {
@@ -37,14 +38,17 @@ class ComplexNumber {
     public String toString(){
         return "Numero complesso: " + this.getReal() + " " + this.getImaginary() + "j";
     }
+}
 
-    public static void main(String[] args) {
-        ComplexNumber z1 = new ComplexNumber(3, 2);
-        ComplexNumber z2 = new ComplexNumber(1, 4);
+public static void main(String[] args) {
+    System.out.println(new ComplexNumber(4, 8).toString());
 
-        ComplexNumber result = z1.times(z2);
+    ComplexNumber z1 = new ComplexNumber(3, 2);
+    ComplexNumber z2 = new ComplexNumber(1, 4);
 
-        System.out.println("test times: " + result);
-        System.out.println("Risultato atteso: -5 + 14j");
-    }
+    ComplexNumber result = z1.times(z2);
+
+    System.out.println("test times: " + result);
+    System.out.println("Risultato atteso: -5 + 14j");
+
 }
