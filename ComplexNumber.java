@@ -38,4 +38,13 @@ class ComplexNumber {
         return "Numero complesso: " + this.getReal() + " " + this.getImaginary() + "j";
     }
 
+    public static void main(String[] args) {
+        ComplexNumber z1 = new ComplexNumber(3, 2);
+        ComplexNumber z2 = new ComplexNumber(1, 4);
+
+        ComplexNumber result = z1.times(z2);
+
+        System.out.println("test times: " + result);
+        System.out.println("Risultato atteso: -5 + 14j");
+    }
 }
