@@ -62,7 +62,9 @@ public static void main(String[] args) {
 
     ComplexNumber result = z1.times(z2);
 
-    System.out.println("test times: " + result);
-    System.out.println("Risultato atteso: -5 + 14j");
-
+    if(result == new ComplexNumber(-5, 14)){
+        System.out.println("test times: true");
+    }else{
+        System.out.println("test times: false");
+    }
 }
