@@ -38,5 +38,19 @@ class ComplexNumber {
 
 public static void main(String[] args) {
     System.out.println(new ComplexNumber(4, 8).toString());
+    ComplexNumber num1 = new ComplexNumber(2, 4);
+    ComplexNumber num2  = new ComplexNumber(3, 8);
+
+    if (num1.plus(num2) == new ComplexNumber(5, 12)) {
+        System.out.println("Sum Test Passed");
+    }else{
+        System.out.println("Sum Test Failed");
+    }
+
+    if(num1.sub(num2) == new ComplexNumber(-1, -4)){
+        System.out.println("Sub Test Passed");
+    }else{
+        System.out.println("Sub Test Failed");
+    }
 
 }
